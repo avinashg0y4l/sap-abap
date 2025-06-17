@@ -10,11 +10,19 @@
 ## 🧾 Notes
 
 ### 🔹 What is a Field Symbol?
-- Field symbols in ABAP act like pointers in C.
-- They are placeholders or symbolic names for other fields.
-- They **do not store data**, but **reference** existing data objects dynamically at runtime.
+- A **Field Symbol** in ABAP is similar to a **pointer** in other programming languages (like C/C++). It does not store data by itself — instead, it points to the memory location of an existing variable or data object.
 
-### 🔹 Syntax
+
+Field Symbols help to:
+- ✅ Reduce memory consumption
+- ⚡ Improve program performance
+- 🔁 Avoid copying data in loops or operations
+
+---
+
+## 🧠 Syntax
+
 ```abap
-FIELD-SYMBOLS: <fs> TYPE data_type.
-ASSIGN variable TO <fs>.
+FIELD-SYMBOLS: <fs_example> TYPE data_type.
+
+ASSIGN variable TO <fs_example>.
