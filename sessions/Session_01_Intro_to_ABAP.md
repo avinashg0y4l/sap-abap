@@ -1,8 +1,6 @@
 # 📘 Session 01: Introduction to ABAP
 
 **Day:** 1
-**Date:** [Enter Today's Date]
-**Trainer:** [Trainer's Name]
 
 This session introduces the fundamentals of the ABAP programming language, how to navigate the ABAP editor, and how to write our very first program.
 
