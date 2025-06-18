@@ -37,9 +37,6 @@ INCLUDE zinclude_name.
 
 **Syntax:**
 ```abap
-FORM sub_name USING var1 TYPE i CHANGING var2 TYPE i.
-  " logic
-ENDFORM.
 
 PERFORM sub_name USING lv_input CHANGING lv_output.
 
