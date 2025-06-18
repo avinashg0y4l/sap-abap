@@ -41,3 +41,17 @@ INCLUDE zinclude_name.
 PERFORM sub_name USING lv_input CHANGING lv_output.
 
 ```
+
+### ✅ C. MACRO (DEFINE...END-OF-DEFINITION)
+
+- Used for code that is repeated frequently, like simple WRITE or calculations.
+- Act like preprocessor directives.
+
+**Syntax:**
+```abap
+
+DEFINE macro_name.
+  " your code
+END-OF-DEFINITION.
+
+```
