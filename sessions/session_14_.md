@@ -141,8 +141,10 @@ interactive:
     6. use loop on internal table.
     7. wrie the fiels which you want to deispaly on 1st screen.
     8. use event: ata selection screeen.
+    9. fetch then data using select quertes.
     loop on internal table.
-    9. 
+    11. wriet ethe fields 
+    
 
 
 alv:
@@ -156,3 +158,20 @@ alv:
 
     8. use loop on one internal table.
     9. reead the reaining tables into looop.
+
+
+fieldcatlog:
+    - it is table used to store output field infromation.
+    - it is concept used in ALV reports.
+
+syntax for declare internal table for fieldcatlog in report.
+    data: INTERNAL_TABEL_NAME TYPE STANDARD_TABEL_OF_FIELDCATLOG.
+
+Example:
+    DATA: LT_FCAT TYPE SLIS_T_FIELDCAT_ALV.
+
+
+Systax for declare work area for fieldcatlog in report.
+    data: work_area_name type standard_structure_of_fieldcatlog.
+
+Example: WA_FCAT TYPE SLIS_FIELDCAT_ALV.
