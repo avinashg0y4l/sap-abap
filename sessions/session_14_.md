@@ -175,3 +175,13 @@ Systax for declare work area for fieldcatlog in report.
     data: work_area_name type standard_structure_of_fieldcatlog.
 
 Example: WA_FCAT TYPE SLIS_FIELDCAT_ALV.
+
+
+syntax for buiding fieldcatlog in reprt.
+    work_area_name-col_pos = '1'.
+    work_area_name-fieldname= 'standard_field_name'.
+    work_area_name-tabname= 'internal_table_name'.
+    append work area name to internal table name.
+    clear: work area name.
+
+
