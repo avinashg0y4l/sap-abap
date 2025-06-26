@@ -185,3 +185,9 @@ syntax for buiding fieldcatlog in reprt.
     clear: work area name.
 
 
+
+Example:
+    WA_FCAT-COL_POS='1'.
+    WA_FCAT-FIELDNAME='MATNR'.
+    WA_FCAT-TABNAME='IT_MARA'.
+    APPEND WA_FCAT TO LT_FCAT.
