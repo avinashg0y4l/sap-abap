@@ -148,49 +148,6 @@ CLASS zcl_car IMPLEMENTATION.
 ENDCLASS.
 
 
-# Visibility Sections and Types of Attributes in ABAP
-
-## Visibility Sections
-
-In ABAP, class components (attributes, methods, etc.) are grouped into three visibility sections:
-
-### 1. Public Section
-- Attributes declared in the `PUBLIC SECTION` can be accessed:
-  - Within the same class
-  - In all subclasses
-  - From external classes (anywhere)
-
-### 2. Protected Section
-- Attributes declared in the `PROTECTED SECTION` can be accessed:
-  - Within the same class
-  - In all subclasses
-- **Note:** They cannot be accessed from external classes.
-- Use the ABAP statement `PROTECTED SECTION` to define protected attributes.
-
-### 3. Private Section
-- Attributes declared in the `PRIVATE SECTION` can only be accessed:
-  - Within the same class
-- **Note:** They cannot be accessed from subclasses or external classes.
-
----
-
-## Types of Attributes
-
-Attributes define the data stored within a class. They can be of the following types:
-
-### 1. Instance Attributes
-- Exist separately for **each instance** of a class.
-- Declared using standard ABAP statements such as `DATA`.
-- Accessed using the **instance reference** and the arrow symbol `->`.
-
-#### Syntax:
-```abap
-CLASS <class_name> DEFINITION.
-  PUBLIC SECTION.
-    DATA: gv_var TYPE <data_element>.
-ENDCLASS.
-
-
 
 
 
@@ -247,4 +204,53 @@ Following the different visibility section.
         Aceess static attributes
             call methid < class_name>==><static_meth>
 
-            HERE< class_name> is name.ss    
+            HERE< class_name> is name.
+
+METHOD: 
+    It is a collection of statements(process block)
+    Alll the attribuetes of a class can be accessed in the methods.
+    The methods can be compared with function modules.
+    ABAP staements 'METHODS or CLASS-METHODS are used to define the methods.
+    The ABAP staemetn 'METHOD .... END MEthods is usded to implement the method in an implementsation of a class.
+
+
+    SYNTEX:
+        Definiton section
+        ........
+        PRIVATE SECTION/PUBLIC SECTION.
+        METHOD:<METH_NAME>IMPORTING <IM_MARAM>..,
+                            EXPORTING<EX_PARAM>..,
+                            CHANGING<CH_PARAM>..,
+                            RETURNING<REF_PARAM>..,
+                            EXCEPTION<EX_PARAM>..,
+        
+        *Implementation section of a class.
+        ........
+        METHOD<meth_name>.
+        *Process Block
+        select..........
+            .
+                .
+                .
+        ENDMETHOD.
+    
+    NOTE: The function method have only one return parameter without any importing and exporting parameters.
+    CALL METHOD<CLASS_NAME> --> (OR) ===><METH_NAME>
+                                   IMPORTING <IM_MARAM>..,
+                            EXPORTING<EX_PARAM>..,
+                            CHANGING<CH_PARAM>..,
+                            RETURNING<REF_PARAM>..,
+                            EXCEPTION<EX_PARAM>..,
+        
+
+
+Properties of OOABAP.
+    Following are useful properitf of OOABAP.
+        1. Abstraction
+        2. Encapsulation.
+        3. Inheritance.
+        4. Polymorphism.
+        5. Interface.
+
+        1. Abstraction: In OOBAP Each and Everything is visulized as objects such are class, objects, etc.
+        2. Encapsulation: This 
