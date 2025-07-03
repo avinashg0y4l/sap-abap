@@ -1,4 +1,4 @@
-**Interviewer:** What are the benefits of ABAP programming?
+*** What are the benefits of ABAP programming?***
 
 **Candidate:**  
 - ABAP offers seamless integration with SAP systems.  
@@ -16,8 +16,7 @@
 
 **Interviewer:** Can you explain the modularization techniques available in ABAP?
 
-**Candidate:**  
-Certainly! In ABAP, modularization is essential for writing clean, maintainable, and reusable code. The main techniques are:  
+**Candidate:**  Certainly! In ABAP, modularization is essential for writing clean, maintainable, and reusable code. The main techniques are:  
 - **Subroutines (FORM routines):** These are blocks of code within a program that can be called multiple times, making the code more organized and reducing redundancy.  
 - **Function Modules:** These are more powerful than subroutines and can be called from any program. They support parameter passing, exception handling, and are managed in the Function Builder.  
 - **Methods:** Part of object-oriented ABAP, methods are procedures defined within classes. They help encapsulate functionality and promote code reuse in OO programming.  
@@ -29,8 +28,7 @@ Certainly! In ABAP, modularization is essential for writing clean, maintainable,
 
 **Interviewer:** What is the syntax for creating a class and method in ABAP?
 
-**Candidate:**  
-In ABAP, you define a class and its methods using the `CLASS ... DEFINITION` and `CLASS ... IMPLEMENTATION` statements. Here’s a basic example:
+**Candidate:**  In ABAP, you define a class and its methods using the `CLASS ... DEFINITION` and `CLASS ... IMPLEMENTATION` statements. Here’s a basic example:
 
 ```abap
 CLASS lcl_example DEFINITION.
@@ -54,8 +52,7 @@ what is the syntax for creating class & method.
 
 **Interviewer:** What do you mean by Fiori & why do we use this module?
 
-**Candidate:**  
-SAP Fiori is a user experience (UX) design approach and a collection of applications for SAP software. It provides a modern, intuitive, and responsive interface that works seamlessly across devices like desktops, tablets, and smartphones. Fiori apps are role-based and focus on simplifying common business tasks.
+**Candidate:**  SAP Fiori is a user experience (UX) design approach and a collection of applications for SAP software. It provides a modern, intuitive, and responsive interface that works seamlessly across devices like desktops, tablets, and smartphones. Fiori apps are role-based and focus on simplifying common business tasks.
 
 We use SAP Fiori to:
 - Improve user productivity with a consistent and easy-to-use interface.
@@ -63,4 +60,34 @@ We use SAP Fiori to:
 - Streamline business processes by providing only relevant information and actions for each user role.
 - Reduce training costs due to its intuitive design.
 - Support digital transformation initiatives within organizations.
+
+
+**Interviewer:** What are the types of reports in ABAP, and how do you create ALV reports?
+
+**Candidate:**  In ABAP, the main types of reports are:
+
+- **Classical Reports:** Traditional line-by-line output, suitable for simple lists.
+- **Interactive Reports:** Allow users to interact with the output, such as drilling down for more details.
+- **ALV (ABAP List Viewer) Reports:** Provide advanced features like sorting, filtering, and formatting, making reports more user-friendly.
+
+**Creating an ALV Report:**  
+To create an ALV report, you typically use the function modules provided by SAP, such as `REUSE_ALV_GRID_DISPLAY` or the object-oriented class `CL_GUI_ALV_GRID`. Here’s a basic example using the function module:
+
+```abap
+DATA: lt_data TYPE TABLE OF sflight.
+
+SELECT * FROM sflight INTO TABLE lt_data.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+    EXPORTING
+        i_structure_name = 'SFLIGHT'
+    TABLES
+        t_outtab        = lt_data.
+```
+
+This code selects data from the `SFLIGHT` table and displays it in an ALV grid. ALV reports are preferred for their flexibility and enhanced user experience.
+
+
+
+If you forget to add sy-subrc statement before select or read table statement, what problem can this cause?
 
