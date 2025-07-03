@@ -95,3 +95,4 @@ ENDCLASS.
 You can call `zcl_demo_amdp=>get_data` from your ABAP code to execute the database logic directly in HANA.
 AMDP
 
+
