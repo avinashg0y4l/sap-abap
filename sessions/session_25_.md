@@ -49,3 +49,11 @@ Creating a CDS Table Function:
 
 
 
+
+
+ALV with Integrated Data Access(IDA)
+The ALV with intergrated data access(ALVIDA) is signifaclty different to the classical ALV - Espacially when used in combination with ABAP CDS.
+
+
+
+ABAP
