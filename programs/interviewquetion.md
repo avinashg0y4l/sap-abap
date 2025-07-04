@@ -95,4 +95,4 @@ This code selects data from the `SFLIGHT` table and displays it in an ALV grid. 
 If you do not check the value of `sy-subrc` after a `SELECT` or `READ TABLE` statement, you might not know whether the operation was successful. `sy-subrc` indicates the result of the last ABAP statement—`0` means success, and a non-zero value means failure (e.g., no data found). Without this check, your program may process incorrect or empty data, leading to logic errors, unexpected results, or even runtime errors. Always checking `sy-subrc` ensures your code handles such cases properly.
 
 
-What are the different type of internal table ABAP and how we use them?ss
+What are the different type of internal table ABAP and how we use them?
